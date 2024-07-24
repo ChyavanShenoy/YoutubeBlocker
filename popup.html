@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Censor Youtube</title>
+    <script src="popup.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .blacklist-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+      }
+      .remove-button {
+        cursor: pointer;
+        color: red;
+        border: none;
+        background: none;
+        font-size: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="extensionTitle">Censor Youtube</h1>
+    <form id="blacklistForm" class="blacklistForm">
+      <input
+        type="text"
+        id="blacklistItem"
+        placeholder="Add channel or keyword"
+        required
+      />
+      <button type="submit">Add</button>
+    </form>
+    <ul id="blacklist"></ul>
+  </body>
+</html>

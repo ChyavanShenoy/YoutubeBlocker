@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Censor Youtube",
+  "version": "1.0",
+  "description": "Blurs YouTube videos from blocked channels or keywords.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
